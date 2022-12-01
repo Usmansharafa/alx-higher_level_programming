@@ -7,4 +7,3 @@ if __name__ == "__main__":
         if name[:2] == "__":
             continue
         print(name)
-
