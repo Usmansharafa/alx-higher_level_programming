@@ -18,3 +18,4 @@ if __name__ == "__main__":
         print(f"{num1} / {num2} = {div(num1, num2)}")
     else:
         print("Unknown operator. Available operators: +, -, * and /")
+        exit(1)
