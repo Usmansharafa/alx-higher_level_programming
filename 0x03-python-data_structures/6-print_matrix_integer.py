@@ -12,8 +12,7 @@ def print_matrix_integer(matrix=[[]]):
             i = 0
             for col in row:
                 i += 1
-                print("{:d}".format(col), end="")
-                if i == 3:
-                    print()
+                if i != 3:
+                    print("{:d} ".format(col), end="")
                 else:
-                    print(" ", end="")
+                    print("{:d}".format(col))
