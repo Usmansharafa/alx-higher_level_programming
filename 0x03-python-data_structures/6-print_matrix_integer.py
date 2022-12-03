@@ -5,10 +5,15 @@
 
 
 def print_matrix_integer(matrix=[[]]):
-    if not matrix:
+    if not matrix[0]:
         print()
     else:
         for row in matrix:
+            i = 0
             for col in row:
-                print("{:d}".format(col), end=' ')
-            print()
+                i += 1
+                print("{:d}".format(col), end="")
+                if i == 3:
+                    print()
+                else:
+                    print(" ", end="")
