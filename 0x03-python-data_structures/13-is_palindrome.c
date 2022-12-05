@@ -27,7 +27,7 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *slow, *fast, *first_half, *second_half;
 
-	if (head == NULL)
+	if (!head || !*head)
 		return (1);
 	slow = *head;
 	fast = *head;
