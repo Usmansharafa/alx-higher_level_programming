@@ -1,5 +1,10 @@
 #!/usr/bin/python3
+"""OOP Python."""
+
+
 class Square:
+    """"Class representing a square."""
+
     def __init__(self, size=0, position=(0, 0)):
         """Initializing a class.
 
