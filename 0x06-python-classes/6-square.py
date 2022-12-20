@@ -17,7 +17,7 @@ class Square:
 
     @property
     def size(self):
-         """int: size of square.
+        """int: size of square.
 
         Raises:
             TypeError: If size is not an integer.
@@ -35,7 +35,7 @@ class Square:
 
     @property
     def position(self):
-         """tuple: coordinate of square.
+        """tuple: coordinate of square.
 
         Raises:
             TypeError: If position is not a tuple of two positive integers.
@@ -46,7 +46,7 @@ class Square:
     def position(self, value):
         if len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
-        self.__position = value 
+        self.__position = value
 
     def area(self):
         """Area module
