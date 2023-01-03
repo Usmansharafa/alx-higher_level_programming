@@ -1,0 +1,133 @@
+How to use 2-matrix_divided.py
+==============================
+
+This module defines a function ``matrix_divided(matrix, div)``that returns a new matrix consisting of the result of divivding each element in
+the ``matrix`` by ``div``.
+
+Usage
+=====
+
+``matrix_divided(matrix, div)`` returns a new matrix formed by dividing each element of ``matrix`` by div.
+
+::
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [
+    ... [1, 2, 3],
+    ... [4, 5, 6],
+    ... [7, 8, 9]]
+    >>> matrix_divided(matrix, 2)
+    [[0.5, 1.0, 1.5], [2.0, 2.5, 3.0], [3.5, 4.0, 4.5]]
+
+::
+    >>> matrix = [
+    ... [1, 2, 3],
+    ... [4, 5, 6]]
+    >>> matrix_divided(matrix, 3)
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+Matrix of floats
+
+::
+
+    >>> matrix = [
+    ... [1.7, 2.2, 3.9],
+    ... [4.6, 5.1, 6.8],
+    ... [7.4, 8.5, 9.3]]
+    >>> matrix_divided(matrix, 2)
+    [[0.85, 1.1, 1.95], [2.3, 2.55, 3.4], [3.7, 4.25, 4.65]]
+
+Matrix of floats and integers 
+
+::
+
+    >>> matrix = [
+    ... [1, 2.9, 3],
+    ... [4.8, 5, 6],
+    ... [7.4, 8, 9.7]]
+    >>> matrix_divided(matrix, 2)
+    [[0.5, 1.45, 1.5], [2.4, 2.5, 3.0], [3.7, 4.0, 4.85]]
+
+Matrix of integers with negative ``div``
+
+::
+
+    >>> matrix = [
+    ... [1, 2, 3],
+    ... [4, 5, 6],
+    ... [7, 8, 9]]
+    >>> matrix_divided(matrix, -4)
+    [[-0.25, -0.5, -0.75], [-1.0, -1.25, -1.5], [-1.75, -2.0, -2.25]]
+
+Matrix of integers with ``div`` equal to infinity
+
+::
+
+    >>> matrix = [
+    ... [1, 2, 3],
+    ... [4, 5, 6],
+    ... [7, 8, 9]]
+    >>> matrix_divided(matrix, float('inf'))
+    [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+Exceptions
+==========
+
+``matrix_divided(matrix, div)`` expects that the first arguments is a list of list of either integers or floats and
+the second argument is either an integer or float that is not zero.
+If ``matrix`` is not a list of list of integers or floats, a TypeError is raised.
+If the ``rows`` of ``matrix`` are not of equal length, a TypeError is raised.
+If ``div`` is a non-integer and non-float, a TypeError is raised.
+If ``div`` is zero, a ZeroDivisionError is raised.
+
+
+::
+
+    >>> matrix = "hello"
+    >>> matrix_divided(matrix, 5)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+::
+
+    >>> matrix = []
+    >>> matrix_divided(matrix, 5)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+::
+
+    >>> matrix = [{"one": 1}]
+    >>> matrix_divided(matrix, 5)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+::
+
+    >>> matrix = [
+    ... [1, 2, 3],
+    ... [4, 5, 6, 10],
+    ... [7, 8, 9]]
+    >>> matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
+
+::
+
+    >>> matrix = [
+    ... [1, 2, 3],
+    ... [4, 5, 6],
+    ... [7, 8, 9]]
+    >>> matrix_divided(matrix, "hello")
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
+::
+
+    >>> matrix = [
+    ... [1, 2, 3],
+    ... [4, 5, 6],
+    ... [7, 8, 9]]
+    >>> matrix_divided(matrix, 0)
+    Traceback (most recent call last):
+    ZeroDivisionError: division by zero
