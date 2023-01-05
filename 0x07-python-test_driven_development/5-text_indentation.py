@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-"""Module that defines a function that prints a text with 2 new lines after some specific characters"""
+"""Module that defines a function that prints a text with
+2 new lines after some specific characters"""
 
 
 def text_indentation(text):
-    """Function that prints a text with 2 new lines after '.', '?', ':' characters.
-    
+    """Function that prints a text with 2 new lines
+    after '.', '?', ':' characters.
+
     Args:
         text (str): string to print.
 

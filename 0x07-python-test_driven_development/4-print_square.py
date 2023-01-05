@@ -4,10 +4,10 @@
 
 def print_square(size):
     """Function that prints a square using '#' character of size 'size'.
-    
+
     Args:
         size (int/float): size of square to be printed
-    
+
     Raises:
         TypeError: if size is not an integer or float
         ValueError: if size is less than zero
@@ -20,8 +20,9 @@ def print_square(size):
     if size < 0:
         raise ValueError("size must be >= 0")
     if size == 0:
-        print()
+        return
     else:
         for i in range(int(size)):
-            print("#" * int(size), end='')
+            for j in range(int(size)):
+                print("#" * int(size), end='')
             print()

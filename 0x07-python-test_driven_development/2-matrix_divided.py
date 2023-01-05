@@ -2,7 +2,7 @@
 """Module to divide the elements of a matrix by a number"""
 
 
-def matrix_divided(matrix, div):
+def matrix_divided(matrix=[[1]], div=1):
     """Function to divide the elements of a matrix by a divisor
 
     Args:
