@@ -4,7 +4,7 @@
 
 class MyInt(int):
     """Class representing my int"""
-    
+
     def __eq__(self, value):
         """Override == operator with != behaviour"""
         return self.real != self.value
