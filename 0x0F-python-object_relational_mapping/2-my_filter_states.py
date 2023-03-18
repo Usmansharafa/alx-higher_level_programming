@@ -17,7 +17,7 @@ def main():
     cur.execute(sql_query)
     query_rows = cur.fetchall()
     for row in query_rows:
-        if row[1][0] == "N":
+        if row[1] == argv[4]
             print(row)
     cur.close()
     conn.close()
