@@ -2,7 +2,7 @@
 """A module that dumps the content of a database"""
 
 
-def main():
+if __name__ == "__main__":
     """This function dumps the contents of a database sorted in ascending
     order by id"""
 
@@ -12,13 +12,9 @@ def main():
     conn = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
                            passwd=argv[2], db=argv[3], charset="utf8")
     cur = conn.cursor()
-    cur.execute("SELECT * FROM states ORDER BY id ASC")
+    cur.execute("SELECT * FROM states")
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
     cur.close()
     conn.close()
-
-
-if __name__ == "__main__":
-    main()
