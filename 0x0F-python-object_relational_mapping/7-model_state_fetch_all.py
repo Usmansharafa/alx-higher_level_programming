@@ -17,8 +17,8 @@ if __name__ == "__main__":
             """This function returns the string representation of a state"""
             return f"{self.id}: {self.name}"
 
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost\
-            /{}'.format(argv[1], argv[2], argv[3]), pool_pre_ping=True)
+    param = f"mysql+mysqldb://{argv[1]}:{argv[2]}@localhost/{argv[3]}"
+    engine = create_engine(param, pool_pre_ping=True)
     Base.metadata.create_all(engine)
 
     Session = sessionmaker(bind=engine)
