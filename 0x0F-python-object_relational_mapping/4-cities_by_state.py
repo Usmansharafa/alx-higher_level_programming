@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-"""This module defines a function that safely displays all values in states
-table of a database that matches the argument"""
+"""This module defines a function that displays all values in cities
+table of a database"""
 
 
 def main():
-    """This function displays all values in the states table of a database
-    that matches the argument"""
+    """This function displays all values in the cities table of a database"""
 
     from sys import argv
     import MySQLdb
