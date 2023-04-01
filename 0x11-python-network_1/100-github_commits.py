@@ -6,7 +6,7 @@ if __name__ == "__main__":
     import requests
     import sys
 
-    url = f"https://api.github.com/repos/{sys.argv[1]}/{sys.argv[2]}/commits"
+    url = f"https://api.github.com/repos/{sys.argv[2]}/{sys.argv[1]}/commits"
 
     resp = requests.get(url)
     result = resp.json()
